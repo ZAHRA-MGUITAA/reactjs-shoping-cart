@@ -136,7 +136,7 @@ const Checkout = () => {
       <div className="md:w-1/2 px-14 md:px-20 py-10 bg-[#F5F5F5] h-full flex flex-col gap-10">
         <div className="products flex flex-col gap-10">
           {cart.map((product) => (
-            <div className="product flex flex-row justify-between items-center">
+            <div className="product flex flex-row justify-between items-center" key={product.id}>
               <div className="flex flex-row items-center gap-4 relative">
                 <img
                   src={product.image}

@@ -7,8 +7,8 @@ import { redirect } from "react-router-dom";
 
 function getDate() {
   const today = new Date();
-  console.log(today.toLocaleString('default', { month: 'short' })
-  )
+  // console.log(today.toLocaleString('default', { month: 'short' })
+  // )
   const month = today.getMonth() + 1;
   const year = today.getFullYear();
   const date = today.getDate();
@@ -35,7 +35,7 @@ export default function Thankyou() {
 
 
   return (
-    <div className="absolute bg-[#FAF9FF] h-full w-full p-6 text-center space-y-8">
+    <div className="absolute bg-[#FAF9FF] w-full p-6 text-center space-y-8">
       <h2 className="font-bold text-5xl ">
         Thank you for your order
       </h2>
@@ -43,7 +43,7 @@ export default function Thankyou() {
         Your order lade our day - we hope that this makes yours! your support
         means the world love if you can share a snap on social media
       </p>
-      <div className="shadow-md container mx-auto md:w-1/2 ">
+      <div className="shadow-md container mx-auto md:w-1/2 py-4 ">
       <h2 className="font-bold text-xl ">
         Thank you, your order has been recieved
       </h2>
@@ -69,7 +69,7 @@ export default function Thankyou() {
             <p >Total</p>
           </div>
           {cart.map((product) => (
-            <div className="flex flex-row justify-between text-start py-4">
+            <div className="flex flex-row justify-between text-start py-4" key={product.id}>
             <p >{product.title} x {product.quantity}</p>
             <p >${product.price * product.quantity}</p>
           </div>

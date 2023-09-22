@@ -43,7 +43,7 @@ const Cart = () => {
       <div className="icon absolute top-0 right-0 size-10 p-6 bg-black z-20" onClick={handelOpenCart}>
         <FaCartShopping className="fill-white " />
       </div>
-      <div className={`flex flex-row md:justify-end  z-50 fixed ${!isCartOpen && "hidden"} w-2/3 `} >
+      <div className={`flex flex-row md:justify-end  z-50 fixed ${!isCartOpen? "hidden":undefined} w-2/3 `} >
         <div className="icon  fixed top-0 bg-black-gray  p-4 z-50 left-0	md:left-2/3" onClick={handelOpenCart}>
           <FaXmark className="fill-white" />
         </div>
@@ -109,7 +109,7 @@ const Cart = () => {
               <h4>SUBTOTAL</h4>
               <h4>$ {total}</h4>
             </div>
-            <Link to={"checkout"} onClick={()=>{setIsCartOpen(false)}} className={cart.length==0&&`disable-link`}><div  className="text-center bg-black-checkout p-4 hover:bg-black " >
+            <Link to={"checkout"} onClick={()=>{setIsCartOpen(false)}} className={cart.length==0?`disable-link`:undefined}><div  className="text-center bg-black-checkout p-4 hover:bg-black " >
               CHECKOUT
             </div></Link >
           </div>

@@ -33,7 +33,7 @@ function App() {
         <Route path="checkout" element={<Checkout />} />
         <Route path="thankyou" element={<Thankyou />} />
       </Route>
-    ), { basename: import.meta.env.DEV ? '/' : '/react-vite-gh-pages/' }
+    ), { basename:"/reactjs-shoping-cart/" }
   );
 
   return <RouterProvider router={router} />;

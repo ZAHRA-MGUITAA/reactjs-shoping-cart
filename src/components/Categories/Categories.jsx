@@ -40,7 +40,7 @@ const Categories = () => {
           </button>
         ))}
       </div>
-      <div className=" flex items-center" onClick={resetFilter}>
+      <div className=" flex items-center p-4 cursor-pointer	" onClick={resetFilter}>
       <FaRepeat /> 
       <h2 className="font-bold text-black p-4 text-start" > Reset Filter</h2>
 
